@@ -1,0 +1,83 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(95deg, rgba(2, 23, 255, 0.6), rgba(253, 0, 0, 0.6));
+    overflow-y: hidden;
+    overflow-x: hidden;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: max-content;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 12%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(3px);
+    z-index: -1;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+}
+
+input {
+    font-size: 15px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+    margin: 10px;
+    border: 1px solid transparent;
+}
+
+.doira {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    bottom: -10%;
+    border-radius: 50%;
+    left: 20%;
+    z-index: -4;
+
+}
+
+.doira2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    top: -10%;
+    border-radius: 50%;
+    right: 20%;
+    z-index: -4;
+}
+
+.btns {
+    width: max-content;
+    margin: 0 auto;
+}
+
+button {
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 8px;
+    outline: none;
+    border: 3px solid #333;
+    border-left: 0.01px solid black;
+    border-right: 0.01px solid black;
+}

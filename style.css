@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition: transform 1s; */
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(95deg, rgba(2, 23, 255, 0.6), rgba(253, 0, 0, 0.6));
+    overflow-y: hidden;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+.container {
+    max-width: 70vh;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.circle {
+    max-width: 1400px;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    position: relative;
+    margin-top: 40px;
+    box-shadow:
+        -20px 0 90px rgba(0, 0, 0, 0.2) inset,
+        0px 20px 90px rgba(0, 0, 0, 0.2),
+        10px -10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.second {
+    width: 2px;
+    height: 30vh;
+    background-color: rgba(255, 0, 0, 0.6);
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: right bottom;
+    transition: 1s
+}
+
+.minute {
+    width: 2px;
+    height: 25vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transition: 1s
+}
+
+.cirle-center {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 48.2%;
+    left: 48.7%;
+    z-index: 11;
+}
+
+.hour {
+    transform-origin: bottom;
+    width: 2px;
+    height: 20vh;
+    background-color: #000;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transition: 1s
+}
+
+p {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0.6;
+}
+
+._12 {
+    top: 2%;
+    left: 44%;
+}
+
+._3 {
+    right: 2%;
+    top: 45%;
+    font-size: 50px
+}
+
+._6 {
+    left: 4%;
+    top: 45%;
+    font-size: 47px;
+}
+
+._9 {
+    bottom: 2%;
+    left: 48%;
+}
+
+.text {
+    margin-top: 40px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    background-color: linear-gradient(40deg, #000, #fff);
+}
+
+span {
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.one {
+    animation: one 0.53s ease-in infinite alternate;
+}
+
+.two {
+    animation: two 0.53s ease-in infinite alternate;
+}
+
+h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 60px;
+    opacity: 0.8;
+}
+
+@keyframes one {
+    0% {
+        transform: translateY(-7px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes two {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-7px);
+    }
+}
+
+.doira {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    bottom: -10%;
+    border-radius: 50%;
+    left: 20%;
+    z-index: -4;
+
+}
+
+.doira2 {
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    top: -10%;
+    border-radius: 50%;
+    right: 20%;
+    z-index: -4;
+}
+
+.modal {
+    position: absolute;
+    transform: translateY(0px);
+    transition: 1s ease-in;
+    opacity: 0;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 30px 20px 20px;
+}
+
+h2 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    width: 270px;
+    color: rgba(255, 255, 255, 0.447);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btns {
+    height: 11vh;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+button {
+    padding: 6px 10px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ccc
+}
+
+.modals {
+    transition: 1s;
+    opacity: 0;
+    transform: translateY(-23px);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    left: 3%;
+    width: 200px;
+    padding: 10px 40px;
+    color: white;
+    background: linear-gradient(177deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.31));
+    z-index: 9999;
+}
+
+#overflow {
+    position: absolute;
+    backdrop-filter: blur(10px);
+}
+
+.socces {
+    width: 700px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    z-index: 99;
+}
+
+h3+h3 {
+    margin-top: 10px;
+}
