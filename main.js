@@ -31,7 +31,7 @@ function user() {
     modals.style.display = 'none'
     modal.style.display = 'none'
 }
-let audio = new Audio('clock.mp3')
+let audio = new Audio('aoudio.wav')
 document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
         let date = new Date()
