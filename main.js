@@ -18,16 +18,20 @@ let txtEl = document.getElementById('txt')
 setInterval(() => {
     if (localStorage.getItem('fullname')) {
         let username = localStorage.getItem("fullname");
-        user()
         txtEl.textContent = "Ro'yhatdan o'tganingiz uchun rahmat"
         userEl.textContent = username
+        user()
     }
-}, 1000)
+    else {
+        txtEl.textContent = ''
+        userEl.textContent = ''
+    }
+}, 100)
 function user() {
     modals.style.display = 'none'
     modal.style.display = 'none'
 }
-let audio = new Audio('clock.wav')
+let audio = new Audio('clock.mp3')
 document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
         let date = new Date()
@@ -51,7 +55,6 @@ setTimeout(() => {
     modals.style.transform = 'translateY(10px)'
     modals.style.opacity = '1'
 }, 3000)
-
 function open() {
     setTimeout(() => {
         modal.style.transform = 'translateY(10px)'
